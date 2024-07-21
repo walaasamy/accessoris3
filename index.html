@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #FF9898;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form {
+            font-size: 16px;
+            background-color: #BE3144;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #9E579D;
+            max-width: 600px; 
+            width: 100%;
+            margin: 50px 0;
+            box-sizing: border-box;
+            height: auto; 
+            max-height: 700px;
+            
+        }
+        h2 {
+            text-align: center;
+            color: #51050F;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #9E579D;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #FF9898;
+            color: #BE3144;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #51050F;
+        }
+        input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+        input[type="submit"]:focus {
+            outline: none;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            form {
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="l1">
+        <h2>يرجي أدخال المعلومات لإنشاء حساب علي موقع الاكسسوارات النسائية</h2>
+        <label for="first name">ألاسم الاول</label>
+        <input type="text" id="first name" name="first name" placeholder="ألاسم الاول" required>
+        <label for="last name">الاسم الاخير</label>
+        <input type="text" id="last name" name="last name" placeholder="الاسم الاخير" required>
+        <label for="email">البريد الالكتروني</label>
+        <input type="email" id="email" name="email" placeholder="البريد الالكتروني" required>
+        <label for="birthdate">تاريخ الميلاد:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br><br>
+        <label for="gender">الجنس:</label>
+        <select id="gender" name="gender" required>
+            <option value="">اختر الجنس</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+        </select>
+        
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
